@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AuthForm from '../components/auth/AuthForm.astro';
+export const prerender = false // Pre-render this page at build time.
+---
+
+<Layout
+  title="Iniciar Sesión | Tu Empresa"
+  description="Inicia sesión en tu cuenta para acceder a todas las funcionalidades."
+>
+  <div class="min-h-[calc(100vh-200px)] flex items-center justify-center px-4 py-12">
+    <AuthForm type="login" />
+  </div>
+</Layout>

@@ -1,0 +1,37 @@
+---
+const features = [
+  {
+    title: "Diseño Profesional",
+    description: "Creamos diseños únicos y atractivos que reflejan la identidad de tu marca.",
+    icon: "🎨"
+  },
+  {
+    title: "Desarrollo Web",
+    description: "Construimos sitios web modernos, rápidos y optimizados para SEO.",
+    icon: "💻"
+  },
+  {
+    title: "Marketing Digital",
+    description: "Estrategias efectivas para aumentar tu presencia online y atraer más clientes.",
+    icon: "📈"
+  }
+];
+---
+
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl text-dark-500 font-bold text-center mb-12">
+      Nuestros Servicios Destacados
+    </h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {features.map(feature => (
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <div class="text-4xl mb-4">{feature.icon}</div>
+          <h3 class="text-xl text-dark-500 font-semibold mb-3">{feature.title}</h3>
+          <p class="text-gray-600">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

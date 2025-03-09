@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const teamMembers = [
+  {
+    name: 'Ana García',
+    position: 'CEO & Fundadora',
+    description: 'Más de 10 años de experiencia en desarrollo web y gestión de proyectos digitales.'
+  },
+  {
+    name: 'Carlos Rodríguez',
+    position: 'Director Técnico',
+    description: 'Especialista en arquitectura de software y soluciones escalables.'
+  },
+  {
+    name: 'Laura Martínez',
+    position: 'Diseñadora UX/UI',
+    description: 'Experta en crear experiencias digitales centradas en el usuario.'
+  }
+];
+---
+
+<Layout
+  title="Nosotros | Tu Empresa"
+  description="Conoce nuestro equipo y nuestra historia. Expertos en desarrollo web y soluciones digitales."
+>
+  <div class="py-16 px-4">
+    <div class="container mx-auto">
+      <!-- Historia -->
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h1 class="text-4xl font-bold text-dark-300 mb-6">Nuestra Historia</h1>
+        <p class="text-lg text-dark-400">
+          Desde 2020, nos hemos dedicado a transformar ideas en soluciones digitales innovadoras.
+          Nuestro compromiso con la excelencia y la satisfacción del cliente nos ha permitido
+          crecer y evolucionar constantemente.
+        </p>
+      </div>
+
+      <!-- Valores -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div class="text-center p-6">
+          <div class="text-3xl mb-4">💡</div>
+          <h3 class="text-xl font-semibold mb-2">Innovación</h3>
+          <p class="text-gray-300">Buscamos constantemente nuevas formas de resolver desafíos.</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="text-3xl mb-4">🤝</div>
+          <h3 class="text-xl font-semibold mb-2">Compromiso</h3>
+          <p class="text-gray-300">Tu éxito es nuestro éxito.</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="text-3xl mb-4">⭐</div>
+          <h3 class="text-xl font-semibold mb-2">Calidad</h3>
+          <p class="text-gray-300">Excelencia en cada detalle de nuestro trabajo.</p>
+        </div>
+      </div>
+
+      <!-- Equipo -->
+      <h2 class="text-3xl font-bold text-center mb-12">Nuestro Equipo</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {teamMembers.map(member => (
+          <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <div class="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4"></div>
+            <h3 class="text-xl text-dark-500 font-semibold mb-2">{member.name}</h3>
+            <p class="text-primary mb-2">{member.position}</p>
+            <p class="text-gray-600">{member.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</Layout>

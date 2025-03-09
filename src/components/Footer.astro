@@ -1,0 +1,50 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="w-full bg-gray-50 border-t border-gray-100">
+  <div class="container mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="text-lg text-dark-500 font-semibold mb-4">Sobre Nosotros</h3>
+        <p class="text-gray-600">
+          Breve descripción de la empresa y su misión.
+        </p>
+      </div>
+      
+      <div>
+        <h3 class="text-lg text-dark-500 font-semibold mb-4">Enlaces Rápidos</h3>
+        <ul class="space-y-2">
+          <li><a href="/" class="text-gray-600 hover:text-primary">Inicio</a></li>
+          <li><a href="/nosotros" class="text-gray-600 hover:text-primary">Nosotros</a></li>
+          <li><a href="/servicios" class="text-gray-600 hover:text-primary">Servicios</a></li>
+          <li><a href="/contacto" class="text-gray-600 hover:text-primary">Contacto</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="text-lg text-dark-500 font-semibold mb-4">Servicios</h3>
+        <ul class="space-y-2">
+          <li><a href="/servicios#servicio1" class="text-gray-600 hover:text-primary">Servicio 1</a></li>
+          <li><a href="/servicios#servicio2" class="text-gray-600 hover:text-primary">Servicio 2</a></li>
+          <li><a href="/servicios#servicio3" class="text-gray-600 hover:text-primary">Servicio 3</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="text-lg text-dark-500 font-semibold mb-4">Contacto</h3>
+        <ul class="space-y-2 text-gray-600">
+          <li>Email: info@empresa.com</li>
+          <li>Teléfono: (123) 456-7890</li>
+          <li>Dirección: Calle Principal #123</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="mt-8 pt-8 border-t border-gray-200">
+      <p class="text-center text-gray-600">
+        © {currentYear} Tu Empresa. Todos los derechos reservados.
+      </p>
+    </div>
+  </div>
+</footer>

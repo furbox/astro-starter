@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AuthForm from '../components/auth/AuthForm.astro';
+---
+
+<Layout
+  title="Registro | Tu Empresa"
+  description="Crea una cuenta nueva para acceder a todas nuestras funcionalidades."
+>
+  <div class="min-h-[calc(100vh-200px)] flex items-center justify-center px-4 py-12">
+    <AuthForm type="register" />
+  </div>
+</Layout>

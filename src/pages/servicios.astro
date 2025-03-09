@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const services = [
+  {
+    title: 'Desarrollo Web',
+    description: 'Creamos sitios web modernos, rápidos y optimizados para buscadores.',
+    features: [
+      'Diseño responsive',
+      'Optimización SEO',
+      'Integración con CMS',
+      'Rendimiento optimizado'
+    ]
+  },
+  {
+    title: 'Diseño UX/UI',
+    description: 'Diseñamos interfaces intuitivas y experiencias de usuario excepcionales.',
+    features: [
+      'Investigación de usuarios',
+      'Wireframing y prototipos',
+      'Diseño visual',
+      'Pruebas de usabilidad'
+    ]
+  },
+  {
+    title: 'Marketing Digital',
+    description: 'Estrategias efectivas para aumentar tu presencia online.',
+    features: [
+      'SEO y SEM',
+      'Marketing de contenidos',
+      'Redes sociales',
+      'Análisis de datos'
+    ]
+  }
+];
+---
+
+<Layout
+  title="Servicios | Tu Empresa"
+  description="Descubre nuestros servicios profesionales de desarrollo web, diseño UX/UI y marketing digital."
+>
+  <div class="py-16 px-4">
+    <div class="container mx-auto">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h1 class="text-4xl font-bold text-gray-100 mb-6">Nuestros Servicios</h1>
+        <p class="text-lg text-gray-300">
+          Ofrecemos soluciones integrales para impulsar tu presencia digital
+          y hacer crecer tu negocio.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {services.map(service => (
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <h3 class="text-2xl text-dark-500 font-semibold mb-4">{service.title}</h3>
+            <p class="text-gray-600 mb-6">{service.description}</p>
+            <ul class="space-y-3">
+              {service.features.map(feature => (
+                <li class="flex items-center text-gray-700">
+                  <svg class="w-5 h-5 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                  </svg>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</Layout>
