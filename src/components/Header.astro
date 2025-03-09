@@ -5,13 +5,21 @@ const navItems = [
   { href: '/servicios', text: 'Servicios' },
   { href: '/contacto', text: 'Contacto' },
 ];
+
+import { Picture } from 'astro:assets';
+import icon from '../assets/letras-naranja.png';
 ---
 
 <header class="w-full bg-white border-b border-gray-100">
   <nav class="container mx-auto px-4 py-4">
     <div class="flex items-center justify-between">
       <a href="/" class="text-2xl font-bold text-primary">
-        Logo
+        <Picture
+          src={icon} 
+          formats={['avif', 'webp']} 
+          alt="Logo Social Business"
+          height={50}
+        />
       </a>
       
       <ul class="hidden md:flex space-x-8">

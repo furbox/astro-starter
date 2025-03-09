@@ -8,11 +8,13 @@ interface Props {
   description: string;
 }
 
+import icon from '../assets/icon.png';
+
 const { title, description } = Astro.props;
 
 // Enhanced SEO metadata
-const siteName = "TechVision";
-const siteUrl = "https://your-website.com";
+const siteName = "Social Business";
+const siteUrl = "https://astro-starter-979.pages.dev";
 ---
 
 <!doctype html>
@@ -20,7 +22,7 @@ const siteUrl = "https://your-website.com";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/icon.png" />
     <meta name="generator" content={Astro.generator} />
     
     <!-- Enhanced SEO -->

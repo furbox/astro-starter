@@ -7,7 +7,7 @@ import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://your-website.com',
+  site: 'https://astro-starter-979.pages.dev',
   compressHTML: true,
 
   vite: {
