@@ -3,13 +3,12 @@ import { defineConfig } from 'astro/config';
 
 import tailwindcss from '@tailwindcss/vite';
 
-import node from '@astrojs/node';
+import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://your-website.com',
   compressHTML: true,
-  output: 'server',
 
   vite: {
     plugins: [tailwindcss()]
@@ -19,12 +18,5 @@ export default defineConfig({
     inlineStylesheets: 'auto'
   },
 
-  server: {
-    host: true,
-    port: 4321
-  },
-
-  adapter: node({
-    mode: 'standalone'
-  })
+  adapter: cloudflare()
 });
